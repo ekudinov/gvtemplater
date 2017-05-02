@@ -19,10 +19,12 @@ const (
 /*
 This file was generated from vuejs templates!Do not edit it here!
 Author:Evgeniy Kudinov 2017 https://github.com/ekudinov
-*/
+
 
 List of files:
 %s
+*/
+
 const (
 
 `
@@ -140,11 +142,11 @@ func (app *App) MakeFile() error {
 	}
 
 	//write body
-	for name, data := range app.Names {
-		if _, err := file.WriteString(name + " = `\n"); err != nil {
+	for _, k := range keys {
+		if _, err := file.WriteString(k + " = `\n"); err != nil {
 			return err
 		}
-		if _, err := file.WriteString(data.Content + "`\n\n"); err != nil {
+		if _, err := file.WriteString(app.Names[k].Content + "`\n\n"); err != nil {
 			return err
 		}
 	}

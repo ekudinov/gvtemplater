@@ -2,11 +2,13 @@ package cmd_test
 /*
 This file was generated from vuejs templates!Do not edit it here!
 Author:Evgeniy Kudinov 2017 https://github.com/ekudinov
-*/
+
 
 List of files:
 1. template3 - normal/template3.vue
 2. template4 - normal/templetesA1/template4.vue
+
+*/
 
 const (
 
